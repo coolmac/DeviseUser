@@ -1,0 +1,28 @@
+<h1>Welcome to our site</h1>
+
+
+<%if user_signed_in? %>
+
+
+
+
+    <%= image_tag @user.photo.url(:small) %>
+    Username:<%= @user.username %> <br />
+    Email:<%=@user.email %><br/>
+    First Name:<%=@user.first_name %> <br />
+    Last Name:<%=@user.last_name %> <br />
+    Date of Birth:<%=@user.date_of_birth %> <br />
+
+  <br/>
+    <%= link_to 'Edit', edit_user_path(@user) %>
+    <%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+
+    <% if @user.admin? %>
+        <td><%= link_to 'Users', users_path  %></td>
+
+<% end %>
+
+
+<% end %>
+

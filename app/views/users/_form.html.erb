@@ -1,0 +1,61 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+    <div ><%= f.label :username %><br />
+      <%= f.text_field :username, autofocus: true %></div>
+
+    <div><%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "off" %></div>
+
+    <div><%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+
+
+    <div><%= f.label :email %><br />
+      <%= f.email_field :email %></div>
+
+    <div><%= f.label :first_name %><br />
+      <%= f.text_field :first_name  %></div>
+
+    <div><%= f.label :last_name %><br />
+      <%= f.text_field :last_name  %></div>
+
+
+    <div><%= f.label :date_of_birth %><br />
+      <%= f.text_field :date_of_birth  %></div>
+
+
+    <div> <%= f.file_field :photo %></div>
+
+    <% if current_user.admin? %>
+
+
+
+
+        <div><%= f.label :admin %><br />
+          <%= f.check_box :admin  %></div>
+
+        <div><%= f.label :blocked %><br />
+          <%= f.check_box :blocked  %></div>
+
+        <% end %>
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
