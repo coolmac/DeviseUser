@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="Rails DeviseUser: development" uuid="79a0ecf5-75cb-4ec8-ba95-40f8db87970d">
+  <data-source source="LOCAL" name="Rails DeviseUser: development" uuid="ab385db4-e7fa-40e2-8dd0-aeb053c69d24">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails DeviseUser: test" uuid="06e3e6b6-f657-4c1c-9e02-aeba82eb6868">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
 </component>

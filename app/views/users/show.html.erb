@@ -23,6 +23,11 @@
 <p>
   <strong>Date of birth:</strong>
   <%= @user.date_of_birth %>
+  
+</p>
+<p>
+  <strong>blocked:</strong>
+  <%= @user.blocked %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
